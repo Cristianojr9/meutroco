@@ -1,29 +1,35 @@
 import React from 'react';
 
 import {
-  Container, Content, Background, Input,
+  Container, Content, Background,
 } from './styles';
+
+import Logo from '../../assets/logo.svg';
 
 const LogInPage: React.FC = () => (
   <Container>
     <Background />
     <Content>
-      <img src={} alt="meutroco" />
+      <img src={Logo} alt="meutroco" />
 
       <form>
-        <h2>
+        <h1>
           Bem-vindo Admnistrador
           <br />
           Utilize seu email e senha para acessar
-        </h2>
+        </h1>
 
-        <Input name="email" placeholder="Login" />
-        <Input name="password" type="password" placeholder="Senha" />
+        <input type="email" placeholder="Login" />
 
-        <a href="">Esqueci a senha</a>
-        <Button type="submit">Login</Button>
+        <input type="password" placeholder="Senha" />
 
-        <Button type="submit">Cadastrar</Button>
+        <a href="forgot">Esqueci a senha</a>
+
+        <button type="submit">Login</button>
+
+        <h1>Não tem cadastro? Sem problema, click em cadastrar</h1>
+
+        <button type="submit">Cadastrar</button>
       </form>
     </Content>
   </Container>
