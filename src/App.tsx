@@ -1,13 +1,17 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import LandingPage from './pages/landingpage';
+import Routes from './routes';
+
 import GlobalStyle from './styles/global';
 
 const App: React.FC = () => (
   <>
-    <LandingPage />
     <GlobalStyle />
+    <Router>
+      <Routes />
+    </Router>
   </>
 );
 
