@@ -41,8 +41,14 @@ const LandingPage: React.FC = () => (
       </section>
       <img src={Celular} alt="Celular" />
     </Content>
+<<<<<<< HEAD
     {/*
     <InfoSection>
+=======
+
+    {/*
+      <InfoSection>
+>>>>>>> master
       <h1>
         O que é a meu troco?
       </h1>
@@ -187,7 +193,10 @@ const LandingPage: React.FC = () => (
       </>
     </Team>
      */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   </Container>
 );
 
