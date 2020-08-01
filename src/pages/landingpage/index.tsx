@@ -5,22 +5,31 @@ import {
   Container, Content, NavBar,
 } from './styles';
 
+import { Link } from 'react-router-dom';
+
 import Logo from '../../assets/logo.svg';
 import Celular from '../../assets/celular.svg';
 // import Cofrinho from '../../assets/cofrinho.svg';
 // import Mulheres from '../../assets/mulheres.svg';
 // import Carrinho from '../../assets/carrinho.svg';
 
+import WhoWeAre from '../whoWeAre';
+import Benefits from '../benefits';
+import ForYou from '../forYou';
+import ForYoourCompany from '../forYourCompany';
+import OurTeam from '../team';
+
+
 const LandingPage: React.FC = () => (
   <Container>
     <NavBar>
       <img src={Logo} alt="Logo" />
       <ul>
-        <a href="/">Quem Somos</a>
-        <a href="/">Para você</a>
-        <a href="/">Para sua empresa</a>
-        <a href="/">Benefícios</a>
-        <a href="/">Equipe</a>
+        <Link to="/who-are">Quem Somos</Link>
+        <Link to="/for-you">Para você</Link>
+        <Link to="/for-your-company">Para sua empresa</Link>
+        <Link to="/benefits">Benefícios</Link>
+        <Link to="/team">Equipe</Link>
       </ul>
     </NavBar>
     <Content>
