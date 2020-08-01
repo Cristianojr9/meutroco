@@ -7,9 +7,9 @@ import {
 
 import Logo from '../../assets/logo.svg';
 import Celular from '../../assets/celular.svg';
-import Cofrinho from '../../assets/cofrinho.svg';
-import Mulheres from '../../assets/mulheres.svg';
-import Carrinho from '../../assets/carrinho.svg';
+// import Cofrinho from '../../assets/cofrinho.svg';
+// import Mulheres from '../../assets/mulheres.svg';
+// import Carrinho from '../../assets/carrinho.svg';
 
 const LandingPage: React.FC = () => (
   <Container>
@@ -41,7 +41,9 @@ const LandingPage: React.FC = () => (
       </section>
       <img src={Celular} alt="Celular" />
     </Content>
-    <InfoSection>
+
+    {/*
+      <InfoSection>
       <h1>
         O que é a meu troco?
       </h1>
@@ -185,6 +187,7 @@ const LandingPage: React.FC = () => (
         icones
       </>
     </Team>
+     */}
   </Container>
 );
 
