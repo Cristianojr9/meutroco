@@ -21,7 +21,23 @@ Here is a list of technlogies (at least what I remeber) that I used to develop t
 - **Prettier**
 - **React Router Dom**
 
+## :pushpin: Veja como rodar a aplicação:
+
+```bash
+
+# Clone o respositório com o comando:
+
+ $ git clone https://github.com/Cristianojr9/meutroco/
+  
+ # Rode o comando yarn 
+ 
+ $ execute yarn start
+  ```
+
+
 ## Demo
 
 - [**Demo**]()
+
+Autor: Cristiano Júnior
 
