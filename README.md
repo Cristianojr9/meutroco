@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,3 +43,48 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+<h1 align="center">
+  Meu troco
+</h1> 
+
+<p align="center">
+  Repositório destinado a landingpage da Meu Troco
+</p>
+
+🆘 Sobre o desafio
+------------------
+Meu troco venho para ajudar a controlar seu troco de forma virtual.
+
+:wrench: Tecnologias utilizadas:
+----------------------
+Here is a list of technlogies (at least what I remeber) that I used to develop the application:
+
+- **ReactJS**
+- **Styled Components**
+- **Axios**
+- **Eslint**
+- **Prettier**
+- **React Router Dom**
+
+## :pushpin: Veja como rodar a aplicação:
+
+```bash
+
+# Clone o respositório com o comando:
+
+ $ git clone https://github.com/Cristianojr9/meutroco/
+  
+ # Rode o comando yarn 
+ 
+ $ execute yarn start
+  ```
+
+
+## Demo
+
+- [**Demo**]()
+
+Autor: Cristiano Júnior
+
+>>>>>>> e15a284eb825cbd333b2a4ccfcc0c7a69a8d6214
