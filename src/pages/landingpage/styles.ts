@@ -13,11 +13,14 @@ export const NavBar = styled.div`
   height: 170px;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-    
+  ul {
+    margin-left: 20%;
+  } 
+
   a {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -30,13 +33,16 @@ export const NavBar = styled.div`
       color: ${shade(0.5, '#747474')};
     }
   }
+
+  img {
+    cursor: pointer;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   section {
     text-align: center;
   }
@@ -272,17 +278,18 @@ export const Form = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-top: 5%;
+  margin-top: 6%;
 
   h1 {
     font-weight: normal;
+    font-size: 45px;
   }
 
   span {
     font-size: 35px;
     font-weight: lighter;
 
-    margin-top: 8%;
+    margin-top: 3%;
     position: relative;
   }
 
@@ -290,7 +297,7 @@ export const Form = styled.div`
     content: '';
     width: 377px;
     height: 5px;
-    margin-top: -10%;
+    margin-top: -5%;
     margin-left: 25%;
     position: absolute;
     background: #FD622E;
@@ -298,40 +305,30 @@ export const Form = styled.div`
 
   input {
     width: 500px;
-    height: 80px;
+    height: 30px;
 
-    font-size: 30px;
-    border-radius: 55px;
+    font-size: 35px;
+    border-radius: 15px;
     border-color: transparent;
 
-    position: absolute;
     background: #C9C9C9;
     transition: 0.2s;
 
-    margin-top: 20%;
+    margin-top: 2%;
     margin-left: -20px;
+    flex: 1;
+    padding: 15px;
+
+
+    &::placeholder {
+      margin-left: 50px;
+      font-size: 25px;
+    }
 
     &:hover {
       border-color: #FD622E;
       background-color: white;
     }
-  }
-
-  button {
-    width: 150px;
-    height: 80px;
-
-    border-radius: 55px;
-    border-color: transparent;
-    background: #FD622E;
-    font-size: 30px;
-    color: white;
-
-    transition: 0.2s;
-
-    margin-top: 20%;
-    margin-left: 10%;
-    position: absolute;
   }
 `;
 
@@ -340,5 +337,32 @@ export const Team = styled.div`
   
   h1 {
 
+  }
+`;
+
+export const Footer = styled.div`
+  margin-top: 70px;
+  height: 400px;
+  background: #1A1A1A;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  color: #ffff;
+
+  flex: 1;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 10px;
+    }
   }
 `;

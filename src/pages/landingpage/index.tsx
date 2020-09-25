@@ -1,56 +1,129 @@
-import React from 'react';
-import { FaGooglePlay } from 'react-icons/fa';
-
-import {
-  Container, Content, NavBar,
-} from './styles';
-
+import React, { useState } from 'react';
+import { FaGooglePlay, FaInstagram } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import {
+  Container, Content, NavBar, Form, Footer,
+} from './styles';
 
 import Logo from '../../assets/logo.svg';
 import Celular from '../../assets/celular.svg';
+import Esquerda from '../../assets/sombra.svg';
 // import Cofrinho from '../../assets/cofrinho.svg';
 // import Mulheres from '../../assets/mulheres.svg';
 // import Carrinho from '../../assets/carrinho.svg';
 
-import WhoWeAre from '../whoWeAre';
-import Benefits from '../benefits';
-import ForYou from '../forYou';
-import ForYoourCompany from '../forYourCompany';
-import OurTeam from '../team';
+// import WhoWeAre from '../whoWeAre';
+// import Benefits from '../benefits';
+// import ForYou from '../forYou';
+// import ForYoourCompany from '../forYourCompany';
+// import OurTeam from '../team';
 
+const LandingPage: React.FC = () => {
+  const [email, setEmail] = useState('');
 
-const LandingPage: React.FC = () => (
-  <Container>
-    <NavBar>
-      <img src={Logo} alt="Logo" />
-      <ul>
-        <Link to="/who-are">Quem Somos</Link>
-        <Link to="/for-you">Para você</Link>
-        <Link to="/for-your-company">Para sua empresa</Link>
-        <Link to="/benefits">Benefícios</Link>
-        <Link to="/team">Equipe</Link>
-      </ul>
-    </NavBar>
-    <Content>
-      <section>
-        <h2>
-          Suas moedas esquecidas
-          {' '}
-          <p><b>farão toda a diferença agora!</b></p>
-        </h2>
-        <button type="submit">
-          <FaGooglePlay size="50px" />
-          <p>
-            <b>Disponivel no</b>
+  function addEmail() {
+    try {
+      setEmail(email);
+      console.log(email);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  return (
+    <Container>
+      <NavBar>
+        <img src={Logo} alt="Logo" />
+        <ul>
+          <Link to="/">Quem Somos</Link>
+          <Link to="/">Para você</Link>
+          <Link to="/">Para sua empresa</Link>
+          <Link to="/">Benefícios</Link>
+          <Link to="/">Equipe</Link>
+        </ul>
+      </NavBar>
+      <Content>
+        <section>
+          <h2>
+            Suas moedas esquecidas
+            {' '}
+            <p><b>farão toda a diferença agora!</b></p>
+          </h2>
+          <button type="submit">
+            <FaGooglePlay size="50px" />
+            <p>
+              <b>Em breve no</b>
+              <br />
+              Google Play
+            </p>
+          </button>
+        </section>
+        <img src={Celular} alt="Celular" />
+      </Content>
+
+      <Form>
+        <h1>Conheça mais sobre a meu troco</h1>
+        <span>Deixe seu e-mail abaixo para entrarmos em contato</span>
+
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onSubmit={addEmail}
+        />
+
+      </Form>
+      <Footer>
+        <div>
+          <h2>Meu Troco</h2>
+          <small>
+            Onde cada centavo conta
+            {' '}
             <br />
-            Google Play
-          </p>
-        </button>
-      </section>
-      <img src={Celular} alt="Celular" />
-    </Content>
-    {/*
+            {' '}
+            Receba seu troco de forma rápida e segura
+            {' '}
+            <br />
+            {' '}
+            O troco agora é certo
+            {' '}
+            <br />
+            {' '}
+            Segurança e agilidade
+          </small>
+        </div>
+
+        <div>
+          <h2>Parceiros</h2>
+          <span>
+            Praia
+            {' '}
+            <br />
+            {' '}
+            Nutec
+            {' '}
+            <br />
+            Corredores digitais
+            {' '}
+            <br />
+
+          </span>
+        </div>
+        <div>
+          <section>
+            <AiOutlineMail size={30} />
+            <span>contatomeutroco@gmail.com</span>
+          </section>
+          <section>
+            <FaInstagram size={30} />
+            <span>@meu_troco</span>
+          </section>
+        </div>
+
+      </Footer>
+
+      {/*
       <InfoSection>
       <h1>
         O que é a meu troco?
@@ -166,14 +239,7 @@ const LandingPage: React.FC = () => (
         <button type="submit">Saiba mais</button>
       </section>
     </Promo>
-    <Form>
-      <h1>Conheça mais sobre a meu troco</h1>
-      <span>Deixe seu e-mail abaixo para entrarmos em contato</span>
 
-      <input type="email" />
-      <button type="submit">Enviar</button>
-
-    </Form>
     <Team>
       <h1>Conheça nossa equipe</h1>
       <>
@@ -196,7 +262,8 @@ const LandingPage: React.FC = () => (
       </>
     </Team>
      */}
-  </Container>
-);
+    </Container>
+  );
+};
 
 export default LandingPage;
