@@ -8,7 +8,7 @@ import {
 
 import Logo from '../../assets/logo.svg';
 import Celular from '../../assets/celular.svg';
-import Esquerda from '../../assets/sombra.svg';
+// import Esquerda from '../../assets/sombra.svg';
 // import Cofrinho from '../../assets/cofrinho.svg';
 // import Mulheres from '../../assets/mulheres.svg';
 // import Carrinho from '../../assets/carrinho.svg';

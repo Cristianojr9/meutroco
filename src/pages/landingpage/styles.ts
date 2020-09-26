@@ -15,7 +15,13 @@ export const NavBar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
   ul {
+    @media (max-width: 780px) {
+      & { 
+        display: none;
+      }
+    }
     margin-left: 20%;
   } 
 
@@ -28,6 +34,13 @@ export const NavBar = styled.div`
     color: #747474;
 
     transition: 0.2s;
+
+    @media (max-width: 780px) {
+      & {
+
+        font-size: 10px;
+      }
+    }
 
     &:hover {
       color: ${shade(0.5, '#747474')};
@@ -43,6 +56,21 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
+  @media (max-width: 780px) {
+    & {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
   section {
     text-align: center;
   }
@@ -50,6 +78,15 @@ export const Content = styled.div`
   h2 {
     font-size: 78px;
     font-weight: lighter;
+
+    @media (max-width: 780px) {
+      & {
+        margin-top: -10px;
+        font-size: 30px;
+        margin: auto 0;
+        margin-left: 42%;
+      }
+    }
   }
 
   button {
@@ -70,13 +107,24 @@ export const Content = styled.div`
     color: white;
     transition: 0.2s;
 
+    @media (max-width: 780px) {
+      & {
+        margin: auto 2;
+        width: 350px;
+        height: 70px;
+        font-size: 24px;
+        padding: 26px;
+        margin-left: 240px;
+      }
+    }
+
     &:hover {
       border: 2px solid #FD622E;
       background: white;
       color: #FD622E;
     }
 
-    svg {
+    img {
       margin-right: 10px;
     }
   }
@@ -280,9 +328,22 @@ export const Form = styled.div`
 
   margin-top: 6%;
 
+  @media (max-width: 780px) {
+    & {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   h1 {
     font-weight: normal;
     font-size: 45px;
+
+    @media (max-width: 780px) {
+      & {
+        font-size: 25px;
+      }
+    }
   }
 
   span {
@@ -291,6 +352,14 @@ export const Form = styled.div`
 
     margin-top: 3%;
     position: relative;
+
+    @media (max-width: 780px) {
+      & {
+        font-size: 25px;
+        margin-top: 60px;
+        text-align: center;
+      }
+    }
   }
 
   span::before {
@@ -301,6 +370,14 @@ export const Form = styled.div`
     margin-left: 25%;
     position: absolute;
     background: #FD622E;
+
+    @media (max-width: 780px) {
+      & {
+        margin-top: -35px;
+        width: 277px;
+        margin-left: 20%;
+      }
+    }
   }
 
   input {
@@ -329,6 +406,14 @@ export const Form = styled.div`
       border-color: #FD622E;
       background-color: white;
     }
+
+    @media (max-width: 780px) {
+      & {
+        width: 350px;
+        height: 70px;
+        margin-left: 1px;
+      }
+    }
   }
 `;
 
@@ -352,6 +437,14 @@ export const Footer = styled.div`
   color: #ffff;
 
   flex: 1;
+
+  @media (max-width: 780px) {
+    & {
+      display: grid;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
 
   h2 {
     font-weight: bold;
