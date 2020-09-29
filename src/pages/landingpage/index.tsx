@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { FaGooglePlay, FaInstagram } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import {
-  Container, Content, NavBar, Form, Footer,
+  Container, Content, NavBar, Form, Footer, ButtonSend
 } from './styles';
 
 import Logo from '../../assets/logo.svg';
@@ -19,9 +19,22 @@ import Celular from '../../assets/celular.svg';
 // import ForYoourCompany from '../forYourCompany';
 // import OurTeam from '../team';
 
+
+
 const LandingPage: React.FC = () => {
   const [newEmail, setNewEmail] = useState('');
-  const [emails, setEmails] = useState([]);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    whatsapp:''
+  })
+
+  function handleAddEmail(event: ChangeEvent <HTMLInputElement>){
+    const { name, value } = event.target
+    
+    setFormData({...formData,[name]: value });
+  }
 
   return (
     <Container>
@@ -65,6 +78,12 @@ const LandingPage: React.FC = () => {
           onChange={(e) => setNewEmail(e.target.value)}
         />
 
+      <ButtonSend>
+        <button type ="submit">
+          Enviar
+        </button>
+      </ButtonSend>
+        
       </Form>
       <Footer>
         <div>

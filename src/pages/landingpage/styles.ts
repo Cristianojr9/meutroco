@@ -459,3 +459,26 @@ export const Footer = styled.div`
     }
   }
 `;
+
+ export const ButtonSend = styled.div`
+  button{
+    width: 350px;
+      height: 80px;
+      margin-top: 10px;
+
+      border-color: transparent;
+      border-radius: 58px;
+
+      font-size: 35px;
+      background-color: #FD622E;
+
+      transition: 0.2s;
+
+      /* &:hover {
+        background: #FFFF;
+        color: white;
+        box-shadow: 2px 2px #1111;
+      } */
+
+  }
+ `;
