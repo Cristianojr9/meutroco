@@ -20,16 +20,8 @@ import Celular from '../../assets/celular.svg';
 // import OurTeam from '../team';
 
 const LandingPage: React.FC = () => {
-  const [email, setEmail] = useState('');
-
-  function addEmail() {
-    try {
-      setEmail(email);
-      console.log(email);
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  const [newEmail, setNewEmail] = useState('');
+  const [emails, setEmails] = useState([]);
 
   return (
     <Container>
@@ -62,15 +54,15 @@ const LandingPage: React.FC = () => {
         <img src={Celular} alt="Celular" />
       </Content>
 
-      <Form>
+      <Form onSubmit={handleAddEmail}>
         <h1>Conheça mais sobre a meu troco</h1>
         <span>Deixe seu e-mail abaixo para entrarmos em contato</span>
 
         <input
           type="email"
           placeholder="Email"
-          value={email}
-          onSubmit={addEmail}
+          value={newEmail}
+          onChange={(e) => setNewEmail(e.target.value)}
         />
 
       </Form>
