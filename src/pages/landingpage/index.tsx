@@ -1,13 +1,14 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { FaGooglePlay, FaInstagram } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   Container, Content, NavBar, Form, Footer, ButtonSend
 } from './styles';
 
 import Logo from '../../assets/logo.svg';
 import Celular from '../../assets/celular.svg';
+import api from '../../services/api';
 // import Esquerda from '../../assets/sombra.svg';
 // import Cofrinho from '../../assets/cofrinho.svg';
 // import Mulheres from '../../assets/mulheres.svg';
@@ -22,18 +23,28 @@ import Celular from '../../assets/celular.svg';
 
 
 const LandingPage: React.FC = () => {
-  const [newEmail, setNewEmail] = useState('');
+  const history = useHistory();
 
+  const [newEmail, setNewEmail] = useState('');
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
-    whatsapp:''
   })
 
-  function handleAddEmail(event: ChangeEvent <HTMLInputElement>){
-    const { name, value } = event.target
-    
-    setFormData({...formData,[name]: value });
+ async function handleAddEmail(event: ChangeEvent <HTMLInputElement>){
+   const response = await api.post('/users', {
+      email :  event.target,
+   })
+
+   const email = response.data;
+   setFormData({...formData, email});
+
+  //  const { name, value } = event.target
+  //  setFormData({...formData,[name]: value });
+  }
+
+  function sendToHome(){
+    //colocar o toast aqui
+    history.push('/');
   }
 
   return (
@@ -79,11 +90,12 @@ const LandingPage: React.FC = () => {
         />
 
       <ButtonSend>
-        <button type ="submit">
+        <button type ="submit" onClick={(e)=>handleAddEmail}>
           Enviar
         </button>
+
       </ButtonSend>
-        
+      
       </Form>
       <Footer>
         <div>

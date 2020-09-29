@@ -9,6 +9,9 @@ routes.post('/users', async (request, response) => {
   await knex('users').insert({
     email
   })
+
+  return response.json({email});
+  
 })
 
 export default routes;
