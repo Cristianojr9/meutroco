@@ -32,7 +32,7 @@ const LandingPage: React.FC = () => {
 
  async function handleAddEmail(event: ChangeEvent <HTMLInputElement>){
    const response = await api.post('/users', {
-      email :  event.target,
+      email : event.target.value,
    })
 
    const email = response.data;
