@@ -5,10 +5,14 @@
   "username": "postgres",
   "password": "docker",
   "database": "meu_troco",
+  "entities":  [
+      "./src/models/*.ts"
+    ],
   "migrations": [
     "./src/database/migrations/*.ts"
   ],
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
+  
 }
